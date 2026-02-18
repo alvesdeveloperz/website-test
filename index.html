@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Pra você, Matheus 💙</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f0f1a, #1c1c2e);
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 60px 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+button {
+    margin-top: 30px;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #4CAF50;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<!-- Música de fundo -->
+<audio id="bgMusic" autoplay loop>
+    <source src="jigolo.m4a" type="audio/mpeg">
+</audio>
+
+<div class="container">
+    <h1>Matheus 💙</h1>
+    <p>
+        Eu fiquei pensando muito em como fazer isso.
+        Não queria só mandar mensagem.
+        Não queria algo simples.
+        Você não é simples kkkkk
+    </p>
+
+    <button onclick="mostrarMensagem()">Continue aqui</button>
+
+    <div id="mensagem" class="hidden">
+        <p style="margin-top:40px;">
+            Desde que você entrou na minha vida, tudo ficou mais leve.
+            Eu sorrio mais.
+            Eu penso mais no futuro.
+            Eu me sinto mais eu.
+        </p>
+
+        <p>
+            Você é aquele tipo de pessoa que chega quieto
+            e de repente vira o centro de tudo.
+        </p>
+
+        <h2 style="margin-top:40px;">
+            Então deixa eu perguntar do jeito certo:
+        </h2>
+
+        <h1>
+            Você aceita namorar comigo? 💙
+        </h1>
+
+        <button onclick="aceitou()">SIM 💙</button>
+    </div>
+</div>
+
+<script>
+function mostrarMensagem() {
+    document.getElementById("mensagem").classList.remove("hidden");
+
+    // Tenta garantir que a música toque (alguns navegadores exigem interação)
+    document.getElementById("bgMusic").play();
+}
+
+function aceitou() {
+    document.body.innerHTML = `
+    <div style="display:flex;justify-content:center;align-items:center;height:100vh;background:#000;color:white;font-size:30px;text-align:center;flex-direction:column;">
+        <div>EU SABIAAAAAAAAAAAA 😭💙</div>
+        <div style="margin-top:20px;font-size:20px;">Agora é oficial. Agora é nós.</div>
+    </div>
+    `;
+}
+</script>
+
+</body>
+</html>
