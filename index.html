@@ -2,6 +2,13 @@
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
+
+<!-- Open Graph (prévia do Instagram) -->
+<meta property="og:title" content="Abre isso com calma 💙">
+<meta property="og:description" content="Eu fiz algo especial pra você.">
+<meta property="og:image" content="https://alvesdeveloperz.github.io/website-test/IMG_2475.JPG">
+<meta property="og:type" content="website">
+
 <title>Pra você, Matheus 💙</title>
 
 <style>
@@ -52,11 +59,12 @@ button:hover {
 }
 </style>
 </head>
+
 <body>
 
 <!-- Música de fundo -->
-<audio id="bgMusic" autoplay loop>
-    <source src="jigolo.m4a" type="audio/mpeg">
+<audio id="bgMusic" loop>
+    <source src="jigolo.m4a" type="audio/mp4">
 </audio>
 
 <div class="container">
@@ -98,9 +106,9 @@ button:hover {
 <script>
 function mostrarMensagem() {
     document.getElementById("mensagem").classList.remove("hidden");
-
-    // Tenta garantir que a música toque (alguns navegadores exigem interação)
-    document.getElementById("bgMusic").play();
+    const music = document.getElementById("bgMusic");
+    music.volume = 0.5; 
+    music.play();
 }
 
 function aceitou() {
